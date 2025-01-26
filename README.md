@@ -1,5 +1,8 @@
 Text Editor User Manual
+
 Welcome to our Text Editor, a command-line interface for editing text files. Below are the commands available to you and instructions on how to use them.
+
+
 Getting Started
 Upon starting the text editor, you will be greeted with the message: "Welcome to the Text Editor!" and prompted to "Enter command:".
 Available Commands
