@@ -26,54 +26,29 @@ public:
     void copy(size_t position, size_t length);
     void paste(size_t position);
 
-
     size_t findText(const std::string& text) const;
-
-    //std::string findText(const std::string& text) const;
     void replaceText(const std::string& oldText, const std::string& newText);
-
-    //void setCursorPosition(size_t position);
     void goToLine(size_t lineNumber);
     void scroll(size_t lines);
-
-    // Optional functionalities
     void highlightSyntax();
     void undo();
     void redo();
-
-    // Display status bar information
     void updateStatusBar();
     void displayStatusBar() const;
 
-    // Additional utility methods as needed
-
 private:
-    // Buffer management
     std::string clipboard;
     std::string textBuffer;
     size_t gapStart, gapEnd;
-
-    // File state management
     std::string currentFileName;
     bool isFileModified;
-
-    // Undo/Redo stacks
     std::stack<std::string> undoStack;
     std::stack<std::string> redoStack;
-
-    // Syntax highlighting rules
     std::unordered_map<std::string, std::string> syntaxRules;
-
-    // Status bar information
     size_t currentLine, currentColumn;
     size_t firstVisibleLine;
     size_t firstVisibleColumn;
-
-    // Helper methods
     void applySyntaxHighlighting();
-    
-
-    // Error handling methods
     void handleError(const std::string& errorMessage);
 };
 
